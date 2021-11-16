@@ -1,4 +1,17 @@
-.App {
+.outline {
+  border: 1px;
+  border-color: aquamarine;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +49,4 @@
     transform: rotate(360deg);
   }
 }
+ */
