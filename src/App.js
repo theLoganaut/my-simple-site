@@ -7,7 +7,7 @@ import {
   Col,
   Button,
   ButtonGroup,
-  InputGroup,
+  Image,
 } from "react-bootstrap";
 
 function App() {
@@ -23,57 +23,116 @@ function App() {
       {/* the first row, main */}
       <Row className="outline" style={{ marginTop: "50px" }}>
         {/* col for spacing */}
-        <Col style={{ textAlign: "right" }} md={3}>
-          edge
-        </Col>
+        <Col style={{ textAlign: "right" }} md={3}></Col>
 
         <Col>
           {/* up to logan, and buttons */}
           <Row>
             {/* words */}
             <Col>
-              <Row style={{ fontSize: "52px" }}>Front end focus,</Row>
-              <Row style={{ fontSize: "52px" }}>Back end sprinkle,</Row>
-              <Row style={{ fontSize: "64px", textAlign: "Right" }}>
+              <Row style={{ fontSize: "52px" }}>
+                <p>Front end focus,</p>
+              </Row>
+              <Row
+                style={{
+                  textAlign: "right",
+                  fontSize: "52px",
+                  marginTop: "-5%",
+                }}
+              >
+                {" "}
+                <p>Back end sprinkle,</p>{" "}
+              </Row>
+              <Row
+                style={{
+                  fontSize: "70px",
+                  textAlign: "Right",
+                  marginTop: "-5%",
+                  marginRight: "1%",
+                }}
+              >
                 <p> Logan</p>
               </Row>
             </Col>
-            {/* buttons */}
+            {/* buttons //!make these seperate rows */}
             <Col style={{ textAlign: "center" }}>
-              <ButtonGroup size="lg" vertical>
-                <Button large>Email Me</Button>
+              <Row>
+                {" "}
+                <Button size="lg">Email Me</Button>
+              </Row>
+              <Row>
+                {" "}
+                <Button>Github</Button>
+              </Row>
+              <Row>
+                {" "}
+                <Button>Projects</Button>
+              </Row>
+              {/* <ButtonGroup size="lg" vertical>
+                <Button style={{ marginBottom: "5%" }} size="lg">
+                  Email Me
+                </Button>
                 <Button>Github</Button>
                 <Button>Projects</Button>
-              </ButtonGroup>
+              </ButtonGroup> */}
             </Col>
           </Row>
           {/* duncan and below with PFP */}
           <Row>
             {/* PFP */}
             <Col>
-              <text>PFP</text>{" "}
+              <Image
+                style={{
+                  marginTop: "-5%",
+                  display: "block",
+                  marginLeft: "auto",
+                  maxWidth: "50%",
+                  height: "auto",
+                  justifyContent: "right",
+                }}
+                src="https://s3.amazonaws.com/myfree.bucket/glassfixoutlinePFP500x500.jpg"
+                roundedCircle
+              />
             </Col>
             {/* words */}
-            <Col>
-              <Row style={{ fontSize: "64px" }}>Duncan</Row>
-              <Row style={{ fontSize: "32px" }}>
-                is ready to grow into a strong member of your dev team
+            <Col style={{ marginTop: "-6%" }}>
+              <Row style={{ fontSize: "70px", marginLeft: "-9%" }}>Duncan</Row>
+              <Row
+                style={{
+                  fontSize: "32px",
+                  marginTop: "",
+                  marginLeft: "5%",
+                }}
+              >
+                is here to become a strong member of your dev team
               </Row>
             </Col>
           </Row>
         </Col>
 
         {/* col for spacing */}
-        <Col style={{ textAlign: "left" }} md={3}>
-          edge
-        </Col>
+        <Col style={{ textAlign: "left" }} md={3}></Col>
       </Row>
 
       {/* 2nd row with my info*/}
-      <Row>
-        <Col style={{ textAlign: "center" }}>1 of 3</Col>
-        <Col style={{ textAlign: "center" }}>2 of 3</Col>
-        <Col style={{ textAlign: "center" }}>3 of 3</Col>
+      <Row style={{ marginTop: "5%" }}>
+        <Col></Col>
+        <Col style={{ textAlign: "center" }}>
+          Iterative - Iteration is key in programming... so of course I try to
+          apply the same concept to build upon nearly every aspect of my life.{" "}
+        </Col>
+        <Col style={{ textAlign: "center" }}>
+          Strong Thinker - Thinking big is valuable in seeing a released
+          product, but it hinders progress if the scope isn't aligned. So, I've
+          learned to break down projects and tasks to those within the scope of
+          a solo developer.
+        </Col>
+        <Col style={{ textAlign: "center" }}>
+          Coms and Co-op - As big team gamer, I know that communication and
+          cooperation are extremely vital to any operation, especially software
+          development
+        </Col>
+        <Col></Col>
       </Row>
     </Container>
   );
