@@ -9,131 +9,80 @@ import {
   ButtonGroup,
   Image,
 } from "react-bootstrap";
+import { useEffect, useState } from "react";
+
+import { useWindowDimension } from "./Components/useWindowDimension";
+import LargeWindow from "./Components/LargeWindow";
 
 function App() {
+  const [width, height] = useWindowDimension();
+
+  const [screenSizeSetting, setScreenSizeSetting] = useState(false);
+
+  useEffect(() => {
+    if (width >= 1653) {
+      setScreenSizeSetting(true);
+      console.log("large");
+    } else if (width >= 1170) {
+      setScreenSizeSetting(false);
+      console.log("med screen");
+    } else if (width >= 2112) {
+      console.log("widescreen?");
+    } else if (width <= 992) {
+      console.log("mobile");
+    }
+  }, [width, height]);
+
   return (
     <Container
       fluid
       style={{
         backgroundColor: "lightgray",
-        height: "100vh",
+        height: "100%",
       }}
     >
-      <Row style={{ marginBottom: "50px" }}></Row>
-      {/* the first row, main */}
-      <Row className="outline" style={{ marginTop: "50px" }}>
-        {/* col for spacing */}
-        <Col style={{ textAlign: "right" }} md={3}></Col>
-
-        <Col>
-          {/* up to logan, and buttons */}
-          <Row>
-            {/* words */}
-            <Col>
-              <Row style={{ fontSize: "52px" }}>
-                <p>Front end focus,</p>
-              </Row>
-              <Row
-                style={{
-                  textAlign: "right",
-                  fontSize: "52px",
-                  marginTop: "-5%",
-                }}
-              >
-                {" "}
-                <p>Back end sprinkle,</p>{" "}
-              </Row>
-              <Row
-                style={{
-                  fontSize: "70px",
-                  textAlign: "Right",
-                  marginTop: "-5%",
-                  marginRight: "1%",
-                }}
-              >
-                <p> Logan</p>
-              </Row>
-            </Col>
-            {/* buttons //!make these seperate rows */}
-            <Col style={{ textAlign: "center" }}>
-              <Row>
-                {" "}
-                <Button size="lg">Email Me</Button>
-              </Row>
-              <Row>
-                {" "}
-                <Button>Github</Button>
-              </Row>
-              <Row>
-                {" "}
-                <Button>Projects</Button>
-              </Row>
-              {/* <ButtonGroup size="lg" vertical>
-                <Button style={{ marginBottom: "5%" }} size="lg">
-                  Email Me
-                </Button>
-                <Button>Github</Button>
-                <Button>Projects</Button>
-              </ButtonGroup> */}
-            </Col>
-          </Row>
-          {/* duncan and below with PFP */}
-          <Row>
-            {/* PFP */}
-            <Col>
-              <Image
-                style={{
-                  marginTop: "-5%",
-                  display: "block",
-                  marginLeft: "auto",
-                  maxWidth: "50%",
-                  height: "auto",
-                  justifyContent: "right",
-                }}
-                src="https://s3.amazonaws.com/myfree.bucket/glassfixoutlinePFP500x500.jpg"
-                roundedCircle
-              />
-            </Col>
-            {/* words */}
-            <Col style={{ marginTop: "-6%" }}>
-              <Row style={{ fontSize: "70px", marginLeft: "-9%" }}>Duncan</Row>
-              <Row
-                style={{
-                  fontSize: "32px",
-                  marginTop: "",
-                  marginLeft: "5%",
-                }}
-              >
-                is here to become a strong member of your dev team
-              </Row>
-            </Col>
-          </Row>
-        </Col>
-
-        {/* col for spacing */}
-        <Col style={{ textAlign: "left" }} md={3}></Col>
-      </Row>
+      {/* 3 sizes of comps, med, larg, mobile */}
+      {screenSizeSetting ? <LargeWindow /> : <></>}
 
       {/* 2nd row with my info*/}
-      <Row style={{ marginTop: "5%" }}>
+      {/* <Row style={{ marginTop: "5%" }}>
         <Col></Col>
         <Col style={{ textAlign: "center" }}>
-          Iterative - Iteration is key in programming... so of course I try to
-          apply the same concept to build upon nearly every aspect of my life.{" "}
-        </Col>
+          <Row style={{ textAlign: "center" }}>
+            <p>ASPIRATIONS</p>
+            <Col style={{ fontSize: "32px", marginLeft: "" }}> NFTs</Col>
+            <Col style={{ marginLeft: "-20%" }}>
+              {" "}
+              design and develop a functional and scalable webapp game that
+              takes advantage of blockchain technologies.
+            </Col>
+          </Row> */}
+
+      {/* <p>
+            {" "}
+            <span style={{ fontSize: "32px" }}>NFTs</span>- design and develop a
+            functional and scalable webapp game that takes advantage of
+            blockchain technologies.{" "}
+          </p>{" "} */}
+      {/*  Iterative - Iteration is key in programming... so of course I try to
+          apply the same concept to build upon nearly every aspect of my life.{" "} */}
+      {/* </Col>
         <Col style={{ textAlign: "center" }}>
+          <Row></Row>
           Strong Thinker - Thinking big is valuable in seeing a released
           product, but it hinders progress if the scope isn't aligned. So, I've
           learned to break down projects and tasks to those within the scope of
           a solo developer.
         </Col>
+
         <Col style={{ textAlign: "center" }}>
+          <Row></Row>
           Coms and Co-op - As big team gamer, I know that communication and
           cooperation are extremely vital to any operation, especially software
           development
         </Col>
         <Col></Col>
-      </Row>
+      </Row> */}
     </Container>
   );
 }

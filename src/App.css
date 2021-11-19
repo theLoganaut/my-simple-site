@@ -11,6 +11,30 @@ body {
   min-height: 100%;
 }
 
+.fontL {
+  font-size: 50px;
+}
+
+.fontM {
+  font-size: 36px;
+}
+
+.fontS {
+  font-size: 28px;
+}
+
+.alignR {
+  text-align: end;
+}
+
+.alignC {
+  text-align: center;
+}
+
+.noMargin {
+  margin: -8% -5% -2% -5%;
+}
+
 /* .App {
   text-align: center;
 }
