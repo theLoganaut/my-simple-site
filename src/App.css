@@ -94,6 +94,35 @@ body {
   margin: -4% -3% -2% -4%;
 }
 
+/* small screen */
+.smFontXL {
+  font-size: 54px;
+}
+
+.smFontL {
+  font-size: 36px;
+}
+
+.smFontM {
+  font-size: 26px;
+}
+
+.smFontS {
+  font-size: 22px;
+}
+
+.smAlignR {
+  text-align: end;
+}
+
+.smAlignC {
+  text-align: center;
+}
+
+.smNoMargin {
+  margin: -4% -3% -2% -4%;
+}
+
 /* .App {
   text-align: center;
 }

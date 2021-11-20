@@ -2,7 +2,7 @@ import React from "react";
 
 import { Row, Col, ButtonGroup, Button, Image } from "react-bootstrap";
 
-const MobileWindow = () => {
+const SmallWindow = () => {
   return (
     <div>
       <Row></Row>
@@ -16,13 +16,13 @@ const MobileWindow = () => {
             {/* words */}
             <Col>
               <Row style={{ marginLeft: "10%" }}>
-                <p className="mobFontL">Front end</p>
+                <p className="smFontL">Front end</p>
               </Row>
               <Row>
                 {" "}
                 <div
                   style={{ marginLeft: "-30%", marginTop: "-10%" }}
-                  className="mobFontL mobAlignR"
+                  className="smFontL mobAlignR"
                 >
                   focus,
                 </div>
@@ -36,7 +36,7 @@ const MobileWindow = () => {
                 }}
               >
                 {" "}
-                <p className="mobFontL">Back end</p>{" "}
+                <p className="smFontL">Back end</p>{" "}
               </Row>
               <Row
                 style={{
@@ -48,7 +48,7 @@ const MobileWindow = () => {
                 }}
               >
                 {" "}
-                <p className="mobFontL">sprinkles,</p>{" "}
+                <p className="smFontL">sprinkles,</p>{" "}
               </Row>
               <Row
                 style={{
@@ -57,7 +57,7 @@ const MobileWindow = () => {
                   marginRight: "-10%",
                 }}
               >
-                <p className="mobFontXL"> Logan</p>
+                <p className="smFontXL"> Logan</p>
               </Row>
             </Col>
             {/* buttons //!make these seperate rows */}
@@ -71,24 +71,24 @@ const MobileWindow = () => {
               <ButtonGroup vertical style={{}}>
                 <Button
                   variant="link"
-                  className="mobFontM"
+                  className="smFontM"
                   style={{ padding: ".5rem 3rem" }}
                 >
-                  <div className="mobFontM"> Email Me</div>
+                  <div className="smFontM"> Email Me</div>
                 </Button>
                 <Button
                   variant="link"
-                  className="mobFontM"
+                  className="smFontM"
                   style={{ padding: ".5rem 3rem" }}
                 >
-                  <div className="mobFontM"> Projects</div>
+                  <div className="smFontM"> Projects</div>
                 </Button>
                 <Button
                   variant="link"
-                  className="mobFontM"
+                  className="smFontM"
                   style={{ padding: ".5rem 3rem" }}
                 >
-                  <div className="mobFontM"> Github</div>
+                  <div className="smFontM"> Github</div>
                 </Button>
               </ButtonGroup>
             </Col>
@@ -102,7 +102,7 @@ const MobileWindow = () => {
                   marginTop: "-5%",
                   display: "block",
                   marginLeft: "auto",
-                  maxWidth: "50%",
+                  maxWidth: "60%",
                   height: "auto",
                   justifyContent: "right",
                 }}
@@ -113,14 +113,14 @@ const MobileWindow = () => {
             {/* words */}
             <Col style={{ marginTop: "-6%" }}>
               <Row style={{ marginLeft: "-15%" }}>
-                <div className="mobFontXL">Duncan</div>
+                <div className="smFontXL">Duncan</div>
               </Row>
               <Row
                 style={{
                   marginTop: "-4%",
                 }}
               >
-                <div className="mobFontM">
+                <div className="smFontM">
                   is here to become a strong member of your dev team
                 </div>
               </Row>
@@ -129,61 +129,56 @@ const MobileWindow = () => {
         </Col>
       </Row>
 
-      <Row style={{ display: "flex", marginTop: "6%" }}>
+      <Row style={{ display: "flex", marginTop: "3%" }}>
         <Row>
           <Col>
             <Row style={{ marginLeft: "", marginTop: "20%" }}>
-              <div className="mobFontS mobAlignC">Auth</div>
+              <div className="smFontS mobAlignC">Auth</div>
             </Row>
             <Row style={{ marginRight: "-15%" }}>
-              <div className="mobFontS mobAlignC">& Auth</div>
+              <div className="smFontS mobAlignC">& Auth</div>
             </Row>
           </Col>
           <Col style={{ marginLeft: "-8%", marginTop: "3%" }}>
-            <div className="mobFontL mobAlignC"> JavaScript</div>
+            <div className="smFontL mobAlignC"> JavaScript</div>
           </Col>
-          <Col
-            style={{ marginLeft: "-2%", marginTop: "4%", marginRight: "-2%" }}
-          >
-            <div className="mobFontL">AWS</div>
+          <Col style={{ marginLeft: "", marginTop: "4%" }}>
+            <div className="smFontL">AWS</div>
           </Col>
           <Col>
             <Row>
-              <div className="mobFontS" style={{ marginLeft: "-30%" }}>
+              <div className="smFontS" style={{ marginLeft: "-40%" }}>
                 Cloud
               </div>
             </Row>
             <Row>
               <div
-                className="mobFontS"
-                style={{ marginLeft: "-25%", marginTop: "-5%" }}
+                className="smFontS"
+                style={{ marginLeft: "-35%", marginTop: "-5%" }}
               >
                 Practitioner
               </div>
             </Row>
             <Row style={{ marginTop: "-10%" }}>
               <div
-                className="mobFontS"
-                style={{ marginLeft: "-25%", marginTop: "5%" }}
+                className="smFontS"
+                style={{ marginLeft: "-35%", marginTop: "5%" }}
               >
                 Solutions
               </div>
             </Row>
-            <Row style={{ marginLeft: "-40%", marginTop: "-7%" }}>
-              <div className="mobFontS">Architech</div>
-            </Row>
           </Col>
         </Row>
-        <Row style={{ marginTop: "-1.5%" }}>
+        <Row>
           <Col>
-            <Row style={{ marginRight: "" }}>
-              <div className="mobFontS mobAlignC">Enthusiastic</div>
+            <Row style={{ marginBottom: "2%" }}>
+              <div className="smFontS mobAlignC">Enthusiastic</div>
             </Row>
           </Col>
           <Col className="noMargin">
             <div
               className="medmobAlignC"
-              style={{ fontSize: "35px", marginTop: "-20%" }}
+              style={{ fontSize: "35px", marginTop: "-15%" }}
             >
               React
             </div>
@@ -191,33 +186,46 @@ const MobileWindow = () => {
           <Col>
             <div
               className="medmobAlignC mobNoMargin"
-              style={{ fontSize: "25px", marginLeft: "2%" }}
+              style={{ fontSize: "25px", marginLeft: "2%", marginTop: "-15%" }}
             >
               HTML
             </div>
           </Col>
-          <Col></Col>
+          <Col>
+            <Row>
+              <div
+                className="smFontS medmobAlignC"
+                style={{ marginLeft: "-20%", marginTop: "-7%" }}
+              >
+                Architech
+              </div>
+            </Row>
+          </Col>
         </Row>
         <Row>
           <Col style={{ marginRight: "-10%" }}>
             <div
-              className="mobFontL medmobAlignC"
-              style={{ marginTop: "-5%", marginLeft: "20%" }}
+              className="smFontL medmobAlignC"
+              style={{ marginTop: "-4%", marginLeft: "20%" }}
             >
               Problem
             </div>
           </Col>
           <Col>
-            <Row>
-              <Col style={{ marginTop: "-2%", marginLeft: "-10%" }}>
-                <div className="mobFontM">CSS</div>
+            <Row style={{ marginTop: "-5%" }}>
+              <Col style={{ marginTop: "", marginLeft: "-20%" }}>
+                <div className="smFontM">CSS</div>
               </Col>
-              <Col style={{ marginTop: "", marginLeft: "-60%" }}>
-                <div className="mobFontS">Fast Learner</div>
+              <Col style={{ marginTop: "", marginLeft: "-30%" }}>
+                <div className="smFontS">Fast Learner</div>
               </Col>
+              <Col></Col>
             </Row>
             <Row>
-              <div className="mobFontM" style={{ marginTop: "-2%" }}>
+              <div
+                className="smFontM"
+                style={{ marginTop: "-2%", marginLeft: "-15%" }}
+              >
                 ExpressJS
               </div>
             </Row>
@@ -226,14 +234,14 @@ const MobileWindow = () => {
         <Row>
           <Col>
             <div
-              className="mobFontM mobAlignR"
-              style={{ marginTop: "-25%", marginRight: "-10%" }}
+              className="smFontM mobAlignR"
+              style={{ marginTop: "-12%", marginRight: "-8%" }}
             >
               Solver
             </div>
           </Col>
-          <Col style={{ marginTop: "-7%" }}>
-            <div className="mobFontM">Agile</div>
+          <Col style={{ marginTop: "-1%", marginLeft: "" }}>
+            <div className="smFontM">Agile</div>
           </Col>
           <Col></Col>
         </Row>
@@ -242,4 +250,4 @@ const MobileWindow = () => {
   );
 };
 
-export default MobileWindow;
+export default SmallWindow;

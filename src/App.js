@@ -8,6 +8,7 @@ import { useWindowDimension } from "./Components/useWindowDimension";
 import LargeWindow from "./Components/LargeWindow";
 import MediumWindow from "./Components/MediumWindow";
 import MobileWindow from "./Components/MobileWindow";
+import SmallWindow from "./Components/SmallWindow";
 
 function App() {
   const [width, height] = useWindowDimension();
@@ -15,6 +16,7 @@ function App() {
   const [screenSizeLarge, setScreenSizeLarge] = useState(false);
   const [screenSizeMedium, setScreenSizeMedium] = useState(false);
   const [screenSizeMobile, setScreenSizeMobile] = useState(false);
+  const [screenSizeSmall, setScreenSizeSmall] = useState(false);
 
   useEffect(() => {
     console.log(height, width);
@@ -22,19 +24,26 @@ function App() {
       setScreenSizeMedium(false);
       setScreenSizeLarge(true);
       setScreenSizeMobile(false);
+      setScreenSizeSmall(false);
       console.log("large");
     } else if (width >= 1043) {
       setScreenSizeMedium(true);
       setScreenSizeLarge(false);
       setScreenSizeMobile(false);
+      setScreenSizeSmall(false);
       console.log("med screen");
-    } else if (width >= 2112) {
-      console.log("widescreen?");
+    } else if (width >= 615) {
+      setScreenSizeMedium(false);
+      setScreenSizeLarge(false);
+      setScreenSizeMobile(false);
+      setScreenSizeSmall(true);
+      console.log("small screen");
     } else if (width <= 1042) {
       console.log("mobile");
       setScreenSizeMedium(false);
       setScreenSizeLarge(false);
       setScreenSizeMobile(true);
+      setScreenSizeSmall(false);
     }
   }, [width, height]);
 
@@ -43,7 +52,7 @@ function App() {
       fluid
       style={{
         backgroundColor: "lightgray",
-        height: "100%",
+        height: "100vh",
       }}
     >
       {/* 3 sizes of comps, med, larg, mobile */}
@@ -52,6 +61,8 @@ function App() {
       {screenSizeMedium ? <MediumWindow /> : <></>}
 
       {screenSizeMobile ? <MobileWindow /> : <></>}
+
+      {screenSizeSmall ? <SmallWindow /> : <></>}
 
       {/* 2nd row with my info*/}
       {/* <Row style={{ marginTop: "5%" }}>
