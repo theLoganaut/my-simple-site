@@ -16,12 +16,11 @@ const LargeWindow = () => {
           <Row>
             {/* words */}
             <Col>
-              <Row style={{ fontSize: "52px" }}>
-                <p>Front end focus,</p>
+              <Row>
+                <p className="fontL">Front end focus,</p>
               </Row>
               <Row
                 style={{
-                  fontSize: "52px",
                   textAlign: "right",
                   marginTop: "-5%",
                   overflow: "false",
@@ -29,7 +28,7 @@ const LargeWindow = () => {
                 }}
               >
                 {" "}
-                <p>Back end sprinkle,</p>{" "}
+                <p className="fontL">Back end sprinkle,</p>{" "}
               </Row>
               <Row
                 style={{

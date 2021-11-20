@@ -1,35 +1,40 @@
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  ButtonGroup,
-  Image,
-} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
 import { useWindowDimension } from "./Components/useWindowDimension";
 import LargeWindow from "./Components/LargeWindow";
+import MediumWindow from "./Components/MediumWindow";
+import MobileWindow from "./Components/MobileWindow";
 
 function App() {
   const [width, height] = useWindowDimension();
 
-  const [screenSizeSetting, setScreenSizeSetting] = useState(false);
+  const [screenSizeLarge, setScreenSizeLarge] = useState(false);
+  const [screenSizeMedium, setScreenSizeMedium] = useState(false);
+  const [screenSizeMobile, setScreenSizeMobile] = useState(false);
 
   useEffect(() => {
-    if (width >= 1653) {
-      setScreenSizeSetting(true);
+    console.log(height, width);
+    if (width >= 1589) {
+      setScreenSizeMedium(false);
+      setScreenSizeLarge(true);
+      setScreenSizeMobile(false);
       console.log("large");
-    } else if (width >= 1170) {
-      setScreenSizeSetting(false);
+    } else if (width >= 1043) {
+      setScreenSizeMedium(true);
+      setScreenSizeLarge(false);
+      setScreenSizeMobile(false);
       console.log("med screen");
     } else if (width >= 2112) {
       console.log("widescreen?");
-    } else if (width <= 992) {
+    } else if (width <= 1042) {
       console.log("mobile");
+      setScreenSizeMedium(false);
+      setScreenSizeLarge(false);
+      setScreenSizeMobile(true);
     }
   }, [width, height]);
 
@@ -42,7 +47,11 @@ function App() {
       }}
     >
       {/* 3 sizes of comps, med, larg, mobile */}
-      {screenSizeSetting ? <LargeWindow /> : <></>}
+      {screenSizeLarge ? <LargeWindow /> : <></>}
+
+      {screenSizeMedium ? <MediumWindow /> : <></>}
+
+      {screenSizeMobile ? <MobileWindow /> : <></>}
 
       {/* 2nd row with my info*/}
       {/* <Row style={{ marginTop: "5%" }}>

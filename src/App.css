@@ -11,6 +11,7 @@ body {
   min-height: 100%;
 }
 
+/* large screen */
 .fontL {
   font-size: 50px;
 }
@@ -33,6 +34,64 @@ body {
 
 .noMargin {
   margin: -8% -5% -2% -5%;
+}
+
+/* medium screen */
+.medFontXL {
+  font-size: 60px;
+}
+
+.medFontL {
+  font-size: 40px;
+}
+
+.medFontM {
+  font-size: 26px;
+}
+
+.meFontS {
+  font-size: 18px;
+}
+
+.medAlignR {
+  text-align: end;
+}
+
+.medAlignC {
+  text-align: center;
+}
+
+.medNoMargin {
+  margin: -8% -5% -2% -5%;
+}
+
+/* mobile screen */
+.mobFontXL {
+  font-size: 48px;
+}
+
+.mobFontL {
+  font-size: 28px;
+}
+
+.mobFontM {
+  font-size: 20px;
+}
+
+.mobFontS {
+  font-size: 14px;
+}
+
+.mobAlignR {
+  text-align: end;
+}
+
+.mobAlignC {
+  text-align: center;
+}
+
+.mobNoMargin {
+  margin: -4% -3% -2% -4%;
 }
 
 /* .App {
