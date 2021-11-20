@@ -9,6 +9,7 @@ import LargeWindow from "./Components/LargeWindow";
 import MediumWindow from "./Components/MediumWindow";
 import MobileWindow from "./Components/MobileWindow";
 import SmallWindow from "./Components/SmallWindow";
+import ThinWindow from "./Components/ThinWindow";
 
 function App() {
   const [width, height] = useWindowDimension();
@@ -17,6 +18,7 @@ function App() {
   const [screenSizeMedium, setScreenSizeMedium] = useState(false);
   const [screenSizeMobile, setScreenSizeMobile] = useState(false);
   const [screenSizeSmall, setScreenSizeSmall] = useState(false);
+  const [screenSizeThin, setScreenSizeThin] = useState(false);
 
   useEffect(() => {
     console.log(height, width);
@@ -25,24 +27,35 @@ function App() {
       setScreenSizeLarge(true);
       setScreenSizeMobile(false);
       setScreenSizeSmall(false);
+      setScreenSizeThin(false);
       console.log("large");
     } else if (width >= 1043) {
       setScreenSizeMedium(true);
       setScreenSizeLarge(false);
       setScreenSizeMobile(false);
       setScreenSizeSmall(false);
+      setScreenSizeThin(false);
       console.log("med screen");
     } else if (width >= 615) {
       setScreenSizeMedium(false);
       setScreenSizeLarge(false);
       setScreenSizeMobile(false);
       setScreenSizeSmall(true);
+      setScreenSizeThin(false);
       console.log("small screen");
-    } else if (width <= 1042) {
+    } else if (width >= 420) {
       console.log("mobile");
       setScreenSizeMedium(false);
       setScreenSizeLarge(false);
       setScreenSizeMobile(true);
+      setScreenSizeSmall(false);
+      setScreenSizeThin(false);
+    } else if (width <= 419) {
+      console.log("thin mobile");
+      setScreenSizeMedium(false);
+      setScreenSizeLarge(false);
+      setScreenSizeMobile(false);
+      setScreenSizeThin(true);
       setScreenSizeSmall(false);
     }
   }, [width, height]);
@@ -63,6 +76,8 @@ function App() {
       {screenSizeMobile ? <MobileWindow /> : <></>}
 
       {screenSizeSmall ? <SmallWindow /> : <></>}
+
+      {screenSizeThin ? <ThinWindow /> : <></>}
 
       {/* 2nd row with my info*/}
       {/* <Row style={{ marginTop: "5%" }}>

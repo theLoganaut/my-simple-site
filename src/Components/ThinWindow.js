@@ -2,7 +2,7 @@ import React from "react";
 
 import { Row, Col, ButtonGroup, Button, Image } from "react-bootstrap";
 
-const MobileWindow = () => {
+const ThinWindow = () => {
   return (
     <div>
       <Row></Row>
@@ -140,39 +140,49 @@ const MobileWindow = () => {
             </Row>
           </Col>
           <Col
-            style={{ marginLeft: "-8%", marginTop: "3%", marginBottom: "-10%" }}
+            style={{
+              marginLeft: "-8%",
+              marginTop: "10%",
+              marginBottom: "",
+            }}
           >
             <div className="mobFontL mobAlignC"> JavaScript</div>
           </Col>
-          <Col
-            style={{ marginLeft: "-2%", marginTop: "4%", marginRight: "-2%" }}
-          >
-            <div className="mobFontL">AWS</div>
-          </Col>
           <Col>
+            {" "}
             <Row>
-              <div className="mobFontS" style={{ marginLeft: "-30%" }}>
-                Cloud
-              </div>
+              <Row style={{ marginBottom: "-10%" }}>
+                <div
+                  className="mobFontS"
+                  style={{ marginLeft: "-50%", marginBottom: "-10%" }}
+                >
+                  Cloud Practitioner
+                </div>
+              </Row>
+              <Col
+                style={{
+                  marginLeft: "-2%",
+                  marginTop: "4%",
+                  marginRight: "-2%",
+                }}
+              >
+                <div className="mobFontL">AWS</div>
+              </Col>
             </Row>
             <Row>
-              <div
-                className="mobFontS"
-                style={{ marginLeft: "-25%", marginTop: "-5%" }}
-              >
-                Practitioner
-              </div>
-            </Row>
-            <Row style={{ marginTop: "-10%" }}>
-              <div
-                className="mobFontS"
-                style={{ marginLeft: "-25%", marginTop: "5%" }}
-              >
-                Solutions
-              </div>
-            </Row>
-            <Row style={{ marginLeft: "-40%", marginTop: "-7%" }}>
-              <div className="mobFontS">Architech</div>
+              <Col>
+                <Row style={{ marginTop: "-10%" }}>
+                  <div
+                    className="mobFontS"
+                    style={{ marginLeft: "-", marginTop: "5%" }}
+                  >
+                    Solutions
+                  </div>
+                </Row>
+                <Row style={{ marginLeft: "", marginTop: "-7%" }}>
+                  <div className="mobFontS">Architech</div>
+                </Row>
+              </Col>
             </Row>
           </Col>
         </Row>
@@ -185,7 +195,7 @@ const MobileWindow = () => {
           <Col className="noMargin">
             <div
               className="medmobAlignC"
-              style={{ fontSize: "35px", marginTop: "-20%" }}
+              style={{ fontSize: "35px", marginTop: "-25%" }}
             >
               React
             </div>
@@ -204,7 +214,7 @@ const MobileWindow = () => {
           <Col style={{ marginRight: "-10%" }}>
             <div
               className="mobFontL medmobAlignC"
-              style={{ marginTop: "-5%", marginLeft: "20%" }}
+              style={{ marginTop: "-5%", marginLeft: "15%" }}
             >
               Problem
             </div>
@@ -229,7 +239,7 @@ const MobileWindow = () => {
           <Col>
             <div
               className="mobFontM mobAlignR"
-              style={{ marginTop: "-28%", marginRight: "-10%" }}
+              style={{ marginTop: "-28%", marginRight: "-15%" }}
             >
               Solver
             </div>
@@ -244,4 +254,4 @@ const MobileWindow = () => {
   );
 };
 
-export default MobileWindow;
+export default ThinWindow;
