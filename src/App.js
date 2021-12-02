@@ -1,7 +1,7 @@
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
 import { useWindowDimension } from "./Components/useWindowDimension";
@@ -104,8 +104,9 @@ function App() {
           position: "absolute",
           top: 0,
           left: 0,
-          width: "100%",
-          height: "100%",
+          width: "100wh",
+          height: "100vh",
+          overflow: "hidden",
         }}
       >
         <Particles
@@ -116,64 +117,22 @@ function App() {
         />
         <div
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
             width: "100%",
             height: "100%",
           }}
         >
-          {screenSizeLarge ? <LargeWindow /> : <></>}
+          <LargeWindow />
+          {/* {screenSizeLarge ? <LargeWindow /> : <></>} */}
 
-          {screenSizeMedium ? <MediumWindow /> : <></>}
+          {/* {screenSizeMedium ? <MediumWindow /> : <></>}
 
           {screenSizeMobile ? <MobileWindow /> : <></>}
 
           {screenSizeSmall ? <SmallWindow /> : <></>}
 
-          {screenSizeThin ? <ThinWindow /> : <></>}
+          {screenSizeThin ? <ThinWindow /> : <></>} */}
         </div>
       </div>
-
-      {/* 2nd row with my info*/}
-      {/* <Row style={{ marginTop: "5%" }}>
-        <Col></Col>
-        <Col style={{ textAlign: "center" }}>
-          <Row style={{ textAlign: "center" }}>
-            <p>ASPIRATIONS</p>
-            <Col style={{ fontSize: "32px", marginLeft: "" }}> NFTs</Col>
-            <Col style={{ marginLeft: "-20%" }}>
-              {" "}
-              design and develop a functional and scalable webapp game that
-              takes advantage of blockchain technologies.
-            </Col>
-          </Row> */}
-
-      {/* <p>
-            {" "}
-            <span style={{ fontSize: "32px" }}>NFTs</span>- design and develop a
-            functional and scalable webapp game that takes advantage of
-            blockchain technologies.{" "}
-          </p>{" "} */}
-      {/*  Iterative - Iteration is key in programming... so of course I try to
-          apply the same concept to build upon nearly every aspect of my life.{" "} */}
-      {/* </Col>
-        <Col style={{ textAlign: "center" }}>
-          <Row></Row>
-          Strong Thinker - Thinking big is valuable in seeing a released
-          product, but it hinders progress if the scope isn't aligned. So, I've
-          learned to break down projects and tasks to those within the scope of
-          a solo developer.
-        </Col>
-
-        <Col style={{ textAlign: "center" }}>
-          <Row></Row>
-          Coms and Co-op - As big team gamer, I know that communication and
-          cooperation are extremely vital to any operation, especially software
-          development
-        </Col>
-        <Col></Col>
-      </Row> */}
     </Container>
   );
 }

@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import EmailMeModal from "./EmailMeModal";
 
-import { Row, Col, ButtonGroup, Button, Image } from "react-bootstrap";
+import { Row, Col, ButtonGroup, Button, Image, Card } from "react-bootstrap";
 
 const LargeWindow = () => {
+  const [showEmail, setShowEmail] = useState(false);
+
+  const handleEmailClose = () => setShowEmail(false);
+  const handleEmailOpen = () => setShowEmail(true);
+
   return (
     <div>
       <Row style={{ marginBottom: "50px" }}></Row>
       {/* the first row, main */}
       <Row className="outline" style={{ marginTop: "50px" }}>
         {/* col for spacing */}
-        <Col style={{ textAlign: "right" }} md={3}></Col>
+        <Col style={{ textAlign: "right" }} md={3}>
+          {" "}
+        </Col>
 
         <Col>
           {/* up to logan, and buttons */}
@@ -47,49 +55,24 @@ const LargeWindow = () => {
                 <Button
                   variant="link"
                   style={{ fontSize: "28px", padding: ".5rem 3rem" }}
+                  onClick={setShowEmail}
                 >
                   Email Me
                 </Button>
-                <Button
+                {/* <Button
                   variant="link"
                   style={{ fontSize: "28px", padding: ".5rem 3rem" }}
                 >
                   Projects
-                </Button>
+                </Button> */}
                 <Button
                   variant="link"
                   style={{ fontSize: "28px", padding: ".5rem 3rem" }}
+                  onClick={() => window.open("https://github.com/theLoganaut")}
                 >
                   Github
                 </Button>
               </ButtonGroup>
-              {/* <Row>
-                {" "}
-                <div>
-                  <Button size="lg" style={{ padding: "15px 32px" }}>
-                    Email Me
-                  </Button>
-                </div>
-              </Row>
-              <Row>
-                <div>
-                  <Button style={{ padding: "15px 32px" }}>Github</Button>
-                </div>{" "}
-              </Row>
-              <Row>
-                {" "}
-                <div>
-                  {" "}
-                  <Button style={{ padding: "15px 32px" }}>Projects</Button>
-                </div>
-              </Row> */}
-              {/* <ButtonGroup size="lg" vertical>
-                <Button style={{ marginBottom: "5%" }} size="lg">
-                  Email Me
-                </Button>
-                <Button>Github</Button>
-                <Button>Projects</Button>
-              </ButtonGroup> */}
             </Col>
           </Row>
           {/* duncan and below with PFP */}
@@ -129,96 +112,198 @@ const LargeWindow = () => {
         <Col style={{ textAlign: "left" }} md={3}></Col>
       </Row>
 
-      <Row style={{ display: "flex", marginTop: "2%" }}>
-        <Row>
-          <Col></Col>
-          <Col>
-            <Row style={{ marginRight: "-20%" }}>
-              <div className="fontS alignR">Auth</div>
-            </Row>
-            <Row style={{ marginRight: "-20%" }}>
-              <div className="fontS alignR">& Auth</div>
-            </Row>
-          </Col>
-          <Col>
-            <div className="fontL alignC"> JavaScript</div>
-          </Col>
-          <Col style={{ marginLeft: "-2%" }}>
-            <div className="fontL">AWS</div>
-          </Col>
-          <Col>
+      {/* 2nd row with my info*/}
+      <Row style={{ marginTop: "1%" }}>
+        <Col></Col>
+        {/* ! first column */}
+        <Col style={{ textAlign: "center", background: "lightgray" }}>
+          <Row style={{ textAlign: "center" }}>
             <Row>
-              <div className="fontS" style={{ marginLeft: "-60%" }}>
-                Cloud Practitioner
-              </div>
-            </Row>
-            <Row>
-              <div className="fontS" style={{ marginLeft: "-60%" }}>
-                Solutions
-              </div>
-            </Row>
-          </Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col></Col>
-          <Col>
-            <Row>
-              <div className="fontS alignR">Enthusiastic</div>
-            </Row>
-          </Col>
-          <Col className="noMargin">
-            <div className="alignC noMargin" style={{ fontSize: "56px" }}>
-              React
-            </div>
-          </Col>
-          <Col className="noMargin">
-            <div className="alignC noMargin" style={{ fontSize: "48px" }}>
-              HTML
-            </div>
-          </Col>
-          <Col>
-            <Row>
-              <div className="fontS alignC" style={{ marginLeft: "-35%" }}>
-                Architech
-              </div>
-            </Row>
-          </Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col></Col>
-          <Col>
-            <div className="fontL alignR">Problem Solver</div>
-            <Row>
-              <div className="fontM alignR">Agile</div>
-            </Row>
-          </Col>
-          <Col>
-            <Row>
-              <Col style={{ marginTop: "-4%" }}>
-                <div className="fontM alignC">CSS</div>
+              <p
+                style={{
+                  fontSize: "24px",
+                  textDecoration: "underline overline",
+                }}
+              >
+                LEGEND & SKILLSET
+              </p>
+              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
+              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
+                JavaScript, HTML, CSS in a React or Vue environment.
               </Col>
-              <Col style={{ marginTop: "-2%", marginLeft: "2%" }}>
-                <div className="fontS">Fast</div>
+            </Row>
+            <Row>
+              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
+              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
+                {" "}
+                AWS Cloud Practicioner working on my Solutions Architect.
               </Col>
+            </Row>
+            <Row>
+              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
+              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
+                {" "}
+                ExpressJs and Backend Concepts, like Routing, Auth & Auth, and
+                Data Security.
+              </Col>
+            </Row>
+            <Row>
+              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
+              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
+                {" "}
+                Designing aesthetically pleasing user orientated views and
+                reusable APIs for developers.
+              </Col>
+            </Row>
+          </Row>
+        </Col>
+        {/* ! 2nd column */}
+        <Col style={{ textAlign: "center" }}>
+          <Row style={{ textAlign: "center" }}>
+            <Row>
+              <p
+                style={{
+                  fontSize: "24px",
+                  textDecoration: "underline overline",
+                }}
+              >
+                ASPIRATIONS
+              </p>
+              {/* <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col> */}
+              <Card style={{ marginBottom: "2%" }}>
+                <Card.Text>
+                  Grow from a developer only position, to a design and
+                  development position.
+                </Card.Text>
+              </Card>
+              {/* <Col style={{ marginBottom: "2%" }}>
+                {" "}
+                Grow from a developer only position, to a design and development
+                position.
+              </Col> */}
+            </Row>
+            <Row>
+              <Card style={{ marginBottom: "2%" }}>
+                <Card.Text>
+                  Learn Electron and use it to develop GUI-based games to
+                  showcase my creativity and skill set better.
+                </Card.Text>
+              </Card>
+              {/* <Col style={{ marginBottom: "2%" }}>
+                {" "}
+                Learn Electron and use it to develop GUI-based games to showcase
+                my creativity and skill set better.
+              </Col> */}
+            </Row>
+            <Row>
+              <Card style={{ marginBottom: "2%" }}>
+                <Card.Text>
+                  Move on from the current and into the future by developing
+                  NFTs(and maybe biotech! I'm a nueralink nerd).
+                </Card.Text>
+              </Card>
+              {/* <Col style={{ marginBottom: "2%" }}>
+                {" "}
+                Move on from the current and into the future by developing
+                NFTs(and maybe biotech! I'm a nueralink nerd).
+              </Col> */}
+            </Row>
+            <Row>
+              {/* <Col style={{ marginBottom: "2%" }}>
+                {" "}
+                Learn Java/C# to not only round my knowledge out, but also
+                slowly work on developing the RTS that pulls RTS games back from
+                the dead.
+              </Col> */}
+              <Card style={{ marginBottom: "2%" }}>
+                <Card.Text>
+                  Learn Java/C# to not only round my knowledge out, but also
+                  slowly work on developing the RTS that pulls RTS games back
+                  from the dead.
+                </Card.Text>
+              </Card>
+            </Row>
+          </Row>
+        </Col>
+
+        <Col style={{ textAlign: "center", background: "lightgray" }}>
+          <Card style={{ height: "100%" }}>
+            <Card.Body>
+              <Card.Title
+                style={{
+                  fontSize: "24px",
+                  textDecoration: "underline overline",
+                }}
+              >
+                ME, AN OVERVIEW
+              </Card.Title>
+              <Card.Text>
+                An enthusiastic, confident, tech-loving-20-something looking to
+                start a career after finding my passion, creating with code.
+              </Card.Text>
+              <Card.Text>
+                Persevering in my efforts to teach myself code taught me a lot,
+                not only about code but also things like; Organization,
+                Iterations, Workflow, GoogleFu, Versioning, Redundancy,
+                Security, and so much more.
+              </Card.Text>
+              <Card.Text>
+                My Coms and Co-op; As big team gamer, I know that communication
+                and cooperation are extremely vital to any operation, but
+                especially software development.
+              </Card.Text>
+              <Card.Text style={{ marginTop: "-5%" }}>
+                Bad communication = Bad product.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          {/* <Row style={{ textAlign: "center" }}>
+            <Row>
+              <p
+                style={{
+                  fontSize: "24px",
+                  textDecoration: "underline overline",
+                }}
+              >
+                ME, AN OVERVIEW
+              </p>
+              <Col style={{ marginBottom: "2%" }}>
+                {" "}
+                An enthusiastic, confident, tech-loving-20-something looking to
+                start a career after finding my passion, creating with code.
+              </Col>
+            </Row>
+            <Row>
+              <Col style={{ marginBottom: "2%" }}>
+                {" "}
+                Persevering in my efforts to teach myself code taught me a lot,
+                not only about code but also things like; Organization,
+                Iterations, Workflow, GoogleFu, Versioning, Redundancy,
+                Security, and so much more.
+              </Col>
+            </Row>
+            <Row>
               <Col>
                 {" "}
-                <div className="fontS" style={{ marginLeft: "-35%" }}>
-                  Learner
-                </div>
+                My Coms and Co-op; As big team gamer, I know that communication
+                and cooperation are extremely vital to any operation, but
+                especially software development.
               </Col>
-              <Col></Col>
+              <p style={{ marginBottom: "2%" }}>
+                {" "}
+                Bad communication = Bad product.
+              </p>
             </Row>
-            <Row>
-              <div className="fontM" style={{ marginTop: "-4%" }}>
-                ExpressJS
-              </div>
-            </Row>
-          </Col>
-          <Col></Col>
-        </Row>
+          </Row> */}
+        </Col>
+        <Col></Col>
       </Row>
+
+      <EmailMeModal
+        showEmail={showEmail}
+        handleEmailClose={handleEmailClose}
+        handleEmailOpen={handleEmailOpen}
+      />
     </div>
   );
 };

@@ -27,12 +27,12 @@ const snowing = {
         distance: 400,
         duration: 0.3,
         opacity: 1,
-        size: 4,
+        size: 40,
       },
       grab: {
-        distance: 400,
+        distance: 300,
         links: {
-          opacity: 0.5,
+          opacity: 0.2,
         },
       },
     },
