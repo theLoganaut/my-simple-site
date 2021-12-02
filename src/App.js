@@ -10,6 +10,8 @@ import MediumWindow from "./Components/MediumWindow";
 import MobileWindow from "./Components/MobileWindow";
 import SmallWindow from "./Components/SmallWindow";
 import ThinWindow from "./Components/ThinWindow";
+import Particles from "react-tsparticles";
+import snowingSettings from "./particleConfigs/snowing";
 
 function App() {
   const [width, height] = useWindowDimension();
@@ -60,24 +62,78 @@ function App() {
     }
   }, [width, height]);
 
+  const particlesInit = (main) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  };
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
   return (
     <Container
       fluid
       style={{
-        backgroundColor: "lightgray",
         height: "100vh",
       }}
     >
+      {/* <Particles
+        id="tsparticles"
+        options={snowingSettings}
+        init={particlesInit}
+        loaded={particlesLoaded}
+        style={{ position: "absolute !important" }}
+      /> */}
+
+      {/* <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        </div> */}
       {/* 3 sizes of comps, med, larg, mobile */}
-      {screenSizeLarge ? <LargeWindow /> : <></>}
 
-      {screenSizeMedium ? <MediumWindow /> : <></>}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <Particles
+          id="tsparticles"
+          options={snowingSettings}
+          init={particlesInit}
+          loaded={particlesLoaded}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {screenSizeLarge ? <LargeWindow /> : <></>}
 
-      {screenSizeMobile ? <MobileWindow /> : <></>}
+          {screenSizeMedium ? <MediumWindow /> : <></>}
 
-      {screenSizeSmall ? <SmallWindow /> : <></>}
+          {screenSizeMobile ? <MobileWindow /> : <></>}
 
-      {screenSizeThin ? <ThinWindow /> : <></>}
+          {screenSizeSmall ? <SmallWindow /> : <></>}
+
+          {screenSizeThin ? <ThinWindow /> : <></>}
+        </div>
+      </div>
 
       {/* 2nd row with my info*/}
       {/* <Row style={{ marginTop: "5%" }}>
