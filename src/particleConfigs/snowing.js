@@ -48,7 +48,7 @@ const snowing = {
             height: 500,
           },
           {
-            src: "/images/awsCloudBW.png",
+            src: "/images/awsCloudTall.png",
             width: 500,
             height: 300,
           },
@@ -79,6 +79,26 @@ const snowing = {
           },
           {
             src: "/images/lockedInfoBW.png",
+            width: 500,
+            height: 500,
+          },
+          {
+            src: "/images/websitePlug.png",
+            width: 500,
+            height: 500,
+          },
+          {
+            src: "/images/defaultPFP.png",
+            width: 500,
+            height: 500,
+          },
+          {
+            src: "/images/apiThroughput.png",
+            width: 500,
+            height: 500,
+          },
+          {
+            src: "/images/certifiedLazy.png",
             width: 500,
             height: 500,
           },
@@ -115,7 +135,7 @@ const snowing = {
       density: {
         enable: true,
       },
-      limit: 80,
+      limit: 90,
       value: 400,
     },
     opacity: {
@@ -140,7 +160,7 @@ const snowing = {
         max: 20,
       },
       animation: {
-        speed: 40,
+        speed: 30,
         minimumValue: 0.1,
       },
     },

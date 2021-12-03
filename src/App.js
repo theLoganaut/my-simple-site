@@ -106,7 +106,7 @@ function App() {
           left: 0,
           width: "100wh",
           height: "100vh",
-          overflow: "hidden",
+          overflowX: "hidden",
         }}
       >
         <Particles

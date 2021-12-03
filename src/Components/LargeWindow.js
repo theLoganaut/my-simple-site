@@ -11,9 +11,8 @@ const LargeWindow = () => {
 
   return (
     <div>
-      <Row style={{ marginBottom: "50px" }}></Row>
       {/* the first row, main */}
-      <Row className="outline" style={{ marginTop: "50px" }}>
+      <Row className="outline" style={{ marginTop: "1%" }}>
         {/* col for spacing */}
         <Col style={{ textAlign: "right" }} md={3}>
           {" "}
@@ -116,7 +115,7 @@ const LargeWindow = () => {
       <Row style={{ marginTop: "1%" }}>
         <Col></Col>
         {/* ! first column */}
-        <Col style={{ textAlign: "center", background: "lightgray" }}>
+        <Col style={{ textAlign: "center" }}>
           <Row style={{ textAlign: "center" }}>
             <Row>
               <p
@@ -127,33 +126,106 @@ const LargeWindow = () => {
               >
                 LEGEND & SKILLSET
               </p>
-              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
-              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
-                JavaScript, HTML, CSS in a React or Vue environment.
-              </Col>
-            </Row>
-            <Row>
-              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
-              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
-                {" "}
-                AWS Cloud Practicioner working on my Solutions Architect.
-              </Col>
-            </Row>
-            <Row>
-              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
-              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
-                {" "}
-                ExpressJs and Backend Concepts, like Routing, Auth & Auth, and
-                Data Security.
-              </Col>
-            </Row>
-            <Row>
-              <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col>
-              <Col style={{ marginLeft: "-20%", marginBottom: "2%" }}>
-                {" "}
-                Designing aesthetically pleasing user orientated views and
-                reusable APIs for developers.
-              </Col>
+
+              <Row style={{ marginBottom: "5%" }}>
+                <Col style={{ marginRight: "-50%" }}>
+                  <Card
+                    style={{
+                      width: "30%",
+                      background: "lightgray",
+                      borderStyle: "hidden",
+                    }}
+                  >
+                    <Card.Img src="/images/myStack.png" />
+                  </Card>
+                </Col>
+
+                <Col>
+                  <Card
+                    border="secondary"
+                    style={{ width: "120%", background: "lightgray" }}
+                  >
+                    <Card.Text>
+                      JavaScript, HTML, CSS in a React environment.
+                    </Card.Text>
+                  </Card>
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: "5%" }}>
+                <Col style={{ marginRight: "-50%" }}>
+                  <Card
+                    style={{
+                      width: "30%",
+                      background: "lightgray",
+                      borderStyle: "hidden",
+                    }}
+                  >
+                    <Card.Img src="/images/awsStack.png" />
+                  </Card>
+                </Col>
+
+                <Col>
+                  <Card
+                    border="secondary"
+                    style={{ width: "120%", background: "lightgray" }}
+                  >
+                    <Card.Text>
+                      AWS Cloud Practitioner working on my Solutions Architect.
+                    </Card.Text>
+                  </Card>
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: "5%" }}>
+                <Col style={{ marginRight: "-50%" }}>
+                  <Card
+                    style={{
+                      width: "30%",
+                      background: "lightgray",
+                      borderStyle: "hidden",
+                    }}
+                  >
+                    <Card.Img src="/images/backendSprinkle.png" />
+                  </Card>
+                </Col>
+
+                <Col>
+                  <Card
+                    border="secondary"
+                    style={{ width: "120%", background: "lightgray" }}
+                  >
+                    <Card.Text>
+                      ExpressJs and Backend Concepts, like Routing, Auth & Auth,
+                      and Data Security.
+                    </Card.Text>
+                  </Card>
+                </Col>
+              </Row>
+
+              <Row style={{ marginBottom: "5%" }}>
+                <Col style={{ marginRight: "-50%" }}>
+                  <Card
+                    style={{
+                      width: "30%",
+                      background: "lightgray",
+                      borderStyle: "hidden",
+                    }}
+                  >
+                    <Card.Img src="/images/designInMind.png" />
+                  </Card>
+                </Col>
+
+                <Col>
+                  <Card
+                    border="secondary"
+                    style={{ width: "120%", background: "lightgray" }}
+                  >
+                    <Card.Text>
+                      Designing aesthetically pleasing user orientated views and
+                      reusable APIs for developers.
+                    </Card.Text>
+                  </Card>
+                </Col>
+              </Row>
             </Row>
           </Row>
         </Col>
@@ -170,52 +242,43 @@ const LargeWindow = () => {
                 ASPIRATIONS
               </p>
               {/* <Col style={{ fontSize: "32px", marginLeft: "" }}> ICONS</Col> */}
-              <Card style={{ marginBottom: "2%" }}>
+              <Card
+                border="secondary"
+                style={{ marginBottom: "2%", backgroundColor: "lightgray" }}
+              >
                 <Card.Text>
                   Grow from a developer only position, to a design and
                   development position.
                 </Card.Text>
               </Card>
-              {/* <Col style={{ marginBottom: "2%" }}>
-                {" "}
-                Grow from a developer only position, to a design and development
-                position.
-              </Col> */}
             </Row>
             <Row>
-              <Card style={{ marginBottom: "2%" }}>
+              <Card
+                border="secondary"
+                style={{ marginBottom: "2%", backgroundColor: "lightgray" }}
+              >
                 <Card.Text>
                   Learn Electron and use it to develop GUI-based games to
                   showcase my creativity and skill set better.
                 </Card.Text>
               </Card>
-              {/* <Col style={{ marginBottom: "2%" }}>
-                {" "}
-                Learn Electron and use it to develop GUI-based games to showcase
-                my creativity and skill set better.
-              </Col> */}
             </Row>
             <Row>
-              <Card style={{ marginBottom: "2%" }}>
+              <Card
+                border="secondary"
+                style={{ marginBottom: "2%", backgroundColor: "lightgray" }}
+              >
                 <Card.Text>
                   Move on from the current and into the future by developing
                   NFTs(and maybe biotech! I'm a nueralink nerd).
                 </Card.Text>
               </Card>
-              {/* <Col style={{ marginBottom: "2%" }}>
-                {" "}
-                Move on from the current and into the future by developing
-                NFTs(and maybe biotech! I'm a nueralink nerd).
-              </Col> */}
             </Row>
             <Row>
-              {/* <Col style={{ marginBottom: "2%" }}>
-                {" "}
-                Learn Java/C# to not only round my knowledge out, but also
-                slowly work on developing the RTS that pulls RTS games back from
-                the dead.
-              </Col> */}
-              <Card style={{ marginBottom: "2%" }}>
+              <Card
+                border="secondary"
+                style={{ marginBottom: "2%", backgroundColor: "lightgray" }}
+              >
                 <Card.Text>
                   Learn Java/C# to not only round my knowledge out, but also
                   slowly work on developing the RTS that pulls RTS games back
@@ -226,38 +289,8 @@ const LargeWindow = () => {
           </Row>
         </Col>
 
-        <Col style={{ textAlign: "center", background: "lightgray" }}>
-          <Card style={{ height: "100%" }}>
-            <Card.Body>
-              <Card.Title
-                style={{
-                  fontSize: "24px",
-                  textDecoration: "underline overline",
-                }}
-              >
-                ME, AN OVERVIEW
-              </Card.Title>
-              <Card.Text>
-                An enthusiastic, confident, tech-loving-20-something looking to
-                start a career after finding my passion, creating with code.
-              </Card.Text>
-              <Card.Text>
-                Persevering in my efforts to teach myself code taught me a lot,
-                not only about code but also things like; Organization,
-                Iterations, Workflow, GoogleFu, Versioning, Redundancy,
-                Security, and so much more.
-              </Card.Text>
-              <Card.Text>
-                My Coms and Co-op; As big team gamer, I know that communication
-                and cooperation are extremely vital to any operation, but
-                especially software development.
-              </Card.Text>
-              <Card.Text style={{ marginTop: "-5%" }}>
-                Bad communication = Bad product.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          {/* <Row style={{ textAlign: "center" }}>
+        <Col style={{ textAlign: "center" }}>
+          <Row style={{ textAlign: "center" }}>
             <Row>
               <p
                 style={{
@@ -267,36 +300,74 @@ const LargeWindow = () => {
               >
                 ME, AN OVERVIEW
               </p>
-              <Col style={{ marginBottom: "2%" }}>
-                {" "}
-                An enthusiastic, confident, tech-loving-20-something looking to
-                start a career after finding my passion, creating with code.
-              </Col>
+              <Card
+                border="secondary"
+                style={{ marginBottom: "2%", backgroundColor: "lightgray" }}
+              >
+                <Card.Text>
+                  An enthusiastic, confident, tech-loving-20-something looking
+                  to start a career after finding my passion, creating with
+                  code.
+                </Card.Text>
+              </Card>
             </Row>
             <Row>
-              <Col style={{ marginBottom: "2%" }}>
-                {" "}
-                Persevering in my efforts to teach myself code taught me a lot,
-                not only about code but also things like; Organization,
-                Iterations, Workflow, GoogleFu, Versioning, Redundancy,
-                Security, and so much more.
-              </Col>
+              <Card
+                border="secondary"
+                style={{ marginBottom: "2%", backgroundColor: "lightgray" }}
+              >
+                <Card.Text>
+                  Persevering in my efforts to teach myself code taught me a
+                  lot, not only about code but also things like; Organization,
+                  Iteratitive Orientation, Workflow, GoogleFu, Versioning,
+                  Redundancy, Security, and so much more.
+                </Card.Text>
+              </Card>
             </Row>
             <Row>
-              <Col>
-                {" "}
-                My Coms and Co-op; As big team gamer, I know that communication
-                and cooperation are extremely vital to any operation, but
-                especially software development.
-              </Col>
-              <p style={{ marginBottom: "2%" }}>
-                {" "}
-                Bad communication = Bad product.
-              </p>
+              <Card
+                border="secondary"
+                style={{ marginBottom: "2%", backgroundColor: "lightgray" }}
+              >
+                <Card.Text>
+                  Coms and Co-op; As big team gamer, I know that communication
+                  and cooperation are extremely vital to any operation, but
+                  especially software development.
+                </Card.Text>
+                <Card.Text style={{ marginTop: "-5%" }}>
+                  Bad communication = Bad product.
+                </Card.Text>
+              </Card>
             </Row>
-          </Row> */}
+          </Row>
         </Col>
         <Col></Col>
+      </Row>
+      <Row>
+        <Card
+          border="secondary"
+          style={{
+            position: "fixed",
+            bottom: "1%",
+            left: "90%",
+            backgroundColor: "lightgray",
+            overflow: "visible",
+            maxWidth: "10em",
+          }}
+        >
+          <Card.Text style={{ marginBottom: "-1%" }}>
+            - React as the framework.
+          </Card.Text>
+          <Card.Text style={{ marginBottom: "-1%" }}>
+            - tsParticles for the falling effect.
+          </Card.Text>
+          <Card.Text style={{ marginBottom: "-1%" }}>
+            - All images made by me.
+          </Card.Text>
+          <Card.Text style={{ marginBottom: "-`1%" }}>
+            Please hire me.
+          </Card.Text>
+        </Card>
       </Row>
 
       <EmailMeModal
