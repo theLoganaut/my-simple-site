@@ -2,16 +2,7 @@ import React, { useState } from "react";
 import EmailMeModal from "./EmailMeModal";
 import AboutModal from "./AboutModal";
 
-import {
-  Row,
-  Col,
-  ButtonGroup,
-  Button,
-  Image,
-  Card,
-  Toast,
-  ToastContainer,
-} from "react-bootstrap";
+import { Row, Col, ButtonGroup, Button, Image, Card } from "react-bootstrap";
 
 const MediumWindow = () => {
   const [showEmail, setShowEmail] = useState(false);
@@ -23,10 +14,6 @@ const MediumWindow = () => {
 
   const handleAboutClose = () => setShowAbout(false);
   const handleAboutOpen = () => setShowAbout(true);
-
-  const [showA, setShowA] = useState(true);
-
-  const toggleShowA = () => setShowA(!showA);
 
   return (
     <div>
@@ -133,30 +120,7 @@ const MediumWindow = () => {
           </Row>
         </Col>
 
-        <Col style={{ textAlign: "left" }} md={3}>
-          {" "}
-          {/*scrapping this idea for now <Button
-            onClick={toggleShowA}
-            size="sm"
-            style={{ backgroundColor: "lightgray", borderColor: "black" }}
-          >
-            <p style={{ fontSize: "42px" }}> &darr; </p>
-          </Button>
-          <Toast show={showA} onClose={toggleShowA}>
-            <Toast.Header>
-              <img
-                src="holder.js/20x20?text=%20"
-                className="rounded me-2"
-                alt=""
-              />
-              <strong className="me-auto">Bootstrap</strong>
-              <small>11 mins ago</small>
-            </Toast.Header>
-            <Toast.Body>
-              Woohoo, you're reading this text in a Toast!
-            </Toast.Body>
-          </Toast> */}
-        </Col>
+        <Col style={{ textAlign: "left" }} md={3}></Col>
       </Row>
 
       {/* 2nd row with my info*/}

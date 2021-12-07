@@ -2,16 +2,7 @@ import React, { useState } from "react";
 import EmailMeModal from "./EmailMeModal";
 import AboutModal from "./AboutModal";
 
-import {
-  Row,
-  Col,
-  ButtonGroup,
-  Button,
-  Image,
-  Card,
-  Toast,
-  ToastContainer,
-} from "react-bootstrap";
+import { Row, Col, ButtonGroup, Button, Image, Card } from "react-bootstrap";
 
 const LargeWindow = () => {
   const [showEmail, setShowEmail] = useState(false);
@@ -23,10 +14,6 @@ const LargeWindow = () => {
 
   const handleAboutClose = () => setShowAbout(false);
   const handleAboutOpen = () => setShowAbout(true);
-
-  const [showA, setShowA] = useState(true);
-
-  const toggleShowA = () => setShowA(!showA);
 
   return (
     <div>
