@@ -1,14 +1,13 @@
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
 import { useWindowDimension } from "./Components/useWindowDimension";
 import LargeWindow from "./Components/LargeWindow";
 import MediumWindow from "./Components/MediumWindow";
 import MobileWindow from "./Components/MobileWindow";
-import ThinWindow from "./Components/ThinWindow";
 import Particles from "react-tsparticles";
 import snowingSettings from "./particleConfigs/snowing";
 
