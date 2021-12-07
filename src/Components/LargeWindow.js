@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import EmailMeModal from "./EmailMeModal";
 
-import { Row, Col, ButtonGroup, Button, Image, Card } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  ButtonGroup,
+  Button,
+  Image,
+  Card,
+  Toast,
+  ToastContainer,
+} from "react-bootstrap";
 
 const LargeWindow = () => {
   const [showEmail, setShowEmail] = useState(false);
 
   const handleEmailClose = () => setShowEmail(false);
   const handleEmailOpen = () => setShowEmail(true);
+
+  const [showA, setShowA] = useState(true);
+
+  const toggleShowA = () => setShowA(!showA);
 
   return (
     <div>
@@ -107,8 +120,30 @@ const LargeWindow = () => {
           </Row>
         </Col>
 
-        {/* col for spacing */}
-        <Col style={{ textAlign: "left" }} md={3}></Col>
+        <Col style={{ textAlign: "left" }} md={3}>
+          {" "}
+          <Button
+            onClick={toggleShowA}
+            size="sm"
+            style={{ backgroundColor: "lightgray", borderColor: "black" }}
+          >
+            <p style={{ fontSize: "42px" }}> &darr; </p>
+          </Button>
+          <Toast show={showA} onClose={toggleShowA}>
+            <Toast.Header>
+              <img
+                src="holder.js/20x20?text=%20"
+                className="rounded me-2"
+                alt=""
+              />
+              <strong className="me-auto">Bootstrap</strong>
+              <small>11 mins ago</small>
+            </Toast.Header>
+            <Toast.Body>
+              Woohoo, you're reading this text in a Toast!
+            </Toast.Body>
+          </Toast>
+        </Col>
       </Row>
 
       {/* 2nd row with my info*/}
@@ -344,7 +379,7 @@ const LargeWindow = () => {
         <Col></Col>
       </Row>
       <Row>
-        <Card
+        {/* <Card
           border="secondary"
           style={{
             position: "fixed",
@@ -367,7 +402,16 @@ const LargeWindow = () => {
           <Card.Text style={{ marginBottom: "-`1%" }}>
             Please hire me.
           </Card.Text>
-        </Card>
+        </Card> */}
+        <div
+          style={{
+            position: "fixed",
+            top: "5%",
+            left: "95%",
+            overflow: "visible",
+            maxWidth: "10em",
+          }}
+        ></div>
       </Row>
 
       <EmailMeModal

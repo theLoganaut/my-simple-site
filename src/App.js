@@ -19,46 +19,26 @@ function App() {
   const [screenSizeLarge, setScreenSizeLarge] = useState(false);
   const [screenSizeMedium, setScreenSizeMedium] = useState(false);
   const [screenSizeMobile, setScreenSizeMobile] = useState(false);
-  const [screenSizeSmall, setScreenSizeSmall] = useState(false);
-  const [screenSizeThin, setScreenSizeThin] = useState(false);
+
+  // ! change this to a switch statement, so ugly
 
   useEffect(() => {
     console.log(height, width);
-    if (width >= 1589) {
+    if (width >= 1200) {
       setScreenSizeMedium(false);
       setScreenSizeLarge(true);
       setScreenSizeMobile(false);
-      setScreenSizeSmall(false);
-      setScreenSizeThin(false);
       console.log("large");
-    } else if (width >= 1043) {
+    } else if (width >= 800) {
       setScreenSizeMedium(true);
       setScreenSizeLarge(false);
       setScreenSizeMobile(false);
-      setScreenSizeSmall(false);
-      setScreenSizeThin(false);
       console.log("med screen");
     } else if (width >= 615) {
       setScreenSizeMedium(false);
       setScreenSizeLarge(false);
-      setScreenSizeMobile(false);
-      setScreenSizeSmall(true);
-      setScreenSizeThin(false);
-      console.log("small screen");
-    } else if (width >= 420) {
-      console.log("mobile");
-      setScreenSizeMedium(false);
-      setScreenSizeLarge(false);
       setScreenSizeMobile(true);
-      setScreenSizeSmall(false);
-      setScreenSizeThin(false);
-    } else if (width <= 419) {
-      console.log("thin mobile");
-      setScreenSizeMedium(false);
-      setScreenSizeLarge(false);
-      setScreenSizeMobile(false);
-      setScreenSizeThin(true);
-      setScreenSizeSmall(false);
+      console.log("mobile screen");
     }
   }, [width, height]);
 
@@ -121,11 +101,10 @@ function App() {
             height: "100%",
           }}
         >
-          <LargeWindow />
-          {/* {screenSizeLarge ? <LargeWindow /> : <></>} */}
+          {screenSizeLarge ? <LargeWindow /> : <></>}
 
-          {/* {screenSizeMedium ? <MediumWindow /> : <></>}
-
+          {screenSizeMedium ? <MediumWindow /> : <></>}
+          {/* 
           {screenSizeMobile ? <MobileWindow /> : <></>}
 
           {screenSizeSmall ? <SmallWindow /> : <></>}
