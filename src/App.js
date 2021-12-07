@@ -33,7 +33,7 @@ function App() {
       setScreenSizeLarge(false);
       setScreenSizeMobile(false);
       console.log("med screen");
-    } else if (width >= 615) {
+    } else {
       setScreenSizeMedium(false);
       setScreenSizeLarge(false);
       setScreenSizeMobile(true);
@@ -103,10 +103,10 @@ function App() {
           {screenSizeLarge ? <LargeWindow /> : <></>}
 
           {screenSizeMedium ? <MediumWindow /> : <></>}
-          {/* 
+
           {screenSizeMobile ? <MobileWindow /> : <></>}
 
-          {screenSizeSmall ? <SmallWindow /> : <></>}
+          {/* {screenSizeSmall ? <SmallWindow /> : <></>}
 
           {screenSizeThin ? <ThinWindow /> : <></>} */}
         </div>

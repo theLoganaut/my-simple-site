@@ -169,7 +169,7 @@ const LargeWindow = () => {
               <p
                 style={{
                   fontSize: "24px",
-                  textDecoration: "underline overline",
+                  textDecoration: "underline",
                 }}
               >
                 LEGEND & SKILLSET
@@ -284,7 +284,7 @@ const LargeWindow = () => {
               <p
                 style={{
                   fontSize: "24px",
-                  textDecoration: "underline overline",
+                  textDecoration: "underline",
                 }}
               >
                 ASPIRATIONS
@@ -343,7 +343,7 @@ const LargeWindow = () => {
               <p
                 style={{
                   fontSize: "24px",
-                  textDecoration: "underline overline",
+                  textDecoration: "underline",
                 }}
               >
                 ME, AN OVERVIEW
