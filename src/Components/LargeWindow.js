@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EmailMeModal from "./EmailMeModal";
+import AboutModal from "./AboutModal";
 
 import {
   Row,
@@ -17,6 +18,11 @@ const LargeWindow = () => {
 
   const handleEmailClose = () => setShowEmail(false);
   const handleEmailOpen = () => setShowEmail(true);
+
+  const [showAbout, setShowAbout] = useState(false);
+
+  const handleAboutClose = () => setShowAbout(false);
+  const handleAboutOpen = () => setShowAbout(true);
 
   const [showA, setShowA] = useState(true);
 
@@ -84,6 +90,13 @@ const LargeWindow = () => {
                 >
                   Github
                 </Button>
+                <Button
+                  variant="link"
+                  style={{ fontSize: "28px", padding: ".5rem 3rem" }}
+                  onClick={setShowAbout}
+                >
+                  About .this
+                </Button>
               </ButtonGroup>
             </Col>
           </Row>
@@ -122,7 +135,7 @@ const LargeWindow = () => {
 
         <Col style={{ textAlign: "left" }} md={3}>
           {" "}
-          <Button
+          {/*scrapping this idea for now <Button
             onClick={toggleShowA}
             size="sm"
             style={{ backgroundColor: "lightgray", borderColor: "black" }}
@@ -142,7 +155,7 @@ const LargeWindow = () => {
             <Toast.Body>
               Woohoo, you're reading this text in a Toast!
             </Toast.Body>
-          </Toast>
+          </Toast> */}
         </Col>
       </Row>
 
@@ -418,6 +431,11 @@ const LargeWindow = () => {
         showEmail={showEmail}
         handleEmailClose={handleEmailClose}
         handleEmailOpen={handleEmailOpen}
+      />
+      <AboutModal
+        showAbout={showAbout}
+        handleAboutClose={handleAboutClose}
+        handleAboutOpen={handleAboutOpen}
       />
     </div>
   );

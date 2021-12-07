@@ -8,7 +8,6 @@ import { useWindowDimension } from "./Components/useWindowDimension";
 import LargeWindow from "./Components/LargeWindow";
 import MediumWindow from "./Components/MediumWindow";
 import MobileWindow from "./Components/MobileWindow";
-import SmallWindow from "./Components/SmallWindow";
 import ThinWindow from "./Components/ThinWindow";
 import Particles from "react-tsparticles";
 import snowingSettings from "./particleConfigs/snowing";
