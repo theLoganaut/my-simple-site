@@ -2,7 +2,7 @@
 
 It's currently being hosted on github pages, and you can find it [here](https://theloganaut.github.io/)
 
-Any questions or thoughts you have feel free to email them to theLoganaut@gmail.com. Hire me quick before some else does!
+Any questions or thoughts you have feel free to email them to theLoganaut@gmail.com. Hire me quick before someone else does!
 
 This is the simpliest version of a personal portfolio website I could come up with. My
 creativity knows no bounds, but I was able to settle on something finally.
