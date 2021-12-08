@@ -82,7 +82,7 @@ const MediumWindow = () => {
                   style={{ fontSize: "22px", padding: ".5rem 2rem" }}
                   onClick={setShowAbout}
                 >
-                  About .this
+                  About.this()
                 </Button>
               </ButtonGroup>
             </Col>
@@ -114,7 +114,7 @@ const MediumWindow = () => {
                   marginLeft: "5%",
                 }}
               >
-                is here to become a strong member of your dev team
+                is here to become a strong member of your software team.
               </Row>
             </Col>
           </Row>
@@ -285,7 +285,7 @@ const MediumWindow = () => {
               >
                 <Card.Text>
                   Move on from the current and into the future by developing
-                  NFTs(and maybe biotech! I'm a nueralink nerd).
+                  NFTs (and maybe biotech! I'm a neuralink nerd).
                 </Card.Text>
               </Card>
             </Row>
