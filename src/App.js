@@ -21,33 +21,32 @@ function App() {
   // ! change this to a switch statement, so ugly
 
   useEffect(() => {
-    console.log(height, width);
+    // console.log(height, width);
     if (width >= 1200) {
       setScreenSizeMedium(false);
       setScreenSizeLarge(true);
       setScreenSizeMobile(false);
-      console.log("large");
+      // console.log("large screen");
     } else if (width >= 800) {
       setScreenSizeMedium(true);
       setScreenSizeLarge(false);
       setScreenSizeMobile(false);
-      console.log("med screen");
+      // console.log("med screen");
     } else {
       setScreenSizeMedium(false);
       setScreenSizeLarge(false);
       setScreenSizeMobile(true);
-      console.log("mobile screen");
+      // console.log("mobile screen");
     }
   }, [width, height]);
 
   const particlesInit = (main) => {
-    console.log(main);
-
+    //console.log(main);
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
   };
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    //console.log(container);
   };
 
   return (

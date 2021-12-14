@@ -60,7 +60,8 @@ const LargeWindow = () => {
                 <Button
                   variant="link"
                   style={{ fontSize: "28px", padding: ".5rem 3rem" }}
-                  onClick={setShowEmail}
+                  // onClick={setShowEmail}
+                  href="mailto:logan.duncan512@gmail.com"
                 >
                   Email Me
                 </Button>

@@ -11,12 +11,25 @@ const AboutModal = ({ showAbout, handleAboutClose }) => {
         <Modal.Body>
           <Card.Text>- React as the framework.</Card.Text>
           <Card.Text>- tsParticles for the falling effect.</Card.Text>
+          <Card.Text>
+            - I look good on a mobile viewing experience too!
+          </Card.Text>
           <Card.Text>- All images made by me.</Card.Text>
+          <Card.Text>
+            - Soon Mailing will be done with an API. So many to chose from
+            though.{" "}
+          </Card.Text>
+          <Card.Text className="alignC">
+            {" "}
+            Anything I missed? Let me know with an email!{" "}
+            <a href="mailto:logan.duncan512@gmail.com">
+              logan.duncan512@gmail.com
+            </a>{" "}
+          </Card.Text>
         </Modal.Body>
         <Modal.Footer>
-          <Card.Text> Anything I missed? Let me know!</Card.Text>
           <Button variant="secondary" onClick={handleAboutClose}>
-            Please hire me (Close).
+            Close (Onboard me quick before someone gets me first!).
           </Button>
         </Modal.Footer>
       </Modal>

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import { Modal, Button, Container, Row, Col } from "react-bootstrap";
+import { Modal, Button, Container, Row, Col, Card } from "react-bootstrap";
 
 const EmailMeModal = ({ showEmail, handleEmailClose }) => {
   const [confirmDialog, setConfirmDialog] = useState(false);
 
   const handleConfirmDialog = () => setConfirmDialog(!confirmDialog);
+
+  const sendAndClose = () => {
+    setConfirmDialog(false);
+    handleEmailClose();
+  };
 
   return (
     <div>
@@ -18,7 +23,14 @@ const EmailMeModal = ({ showEmail, handleEmailClose }) => {
               <Row>
                 <Col className="alignC">
                   {" "}
-                  <Button variant="outline-success" size="lg">
+                  <Button
+                    id="submit_form"
+                    variant="outline-success"
+                    size="lg"
+                    onClick={sendAndClose}
+                    type="submit"
+                    value="Send"
+                  >
                     YES
                   </Button>
                 </Col>
@@ -68,6 +80,11 @@ const EmailMeModal = ({ showEmail, handleEmailClose }) => {
                   />
                 </Row>
               </Container>
+              <Card.Text style={{ fontSize: "12px", color: "red" }}>
+                {" "}
+                NOTE: This doesn't remember what you wrote (yet!) so don't click
+                out!
+              </Card.Text>
             </Modal.Body>
             <Modal.Footer>
               {/* add type="submit" value="Send" so it works */}

@@ -59,8 +59,9 @@ const MediumWindow = () => {
               <ButtonGroup vertical style={{}}>
                 <Button
                   variant="link"
-                  style={{ fontSize: "22px", padding: ".5rem 2rem" }}
-                  onClick={setShowEmail}
+                  style={{ fontSize: "22px", padding: ".5rem 3rem" }}
+                  // onClick={setShowEmail}
+                  href="mailto:logan.duncan512@gmail.com"
                 >
                   Email Me
                 </Button>
